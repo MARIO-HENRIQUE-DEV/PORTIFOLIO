@@ -1,0 +1,239 @@
+* {
+  margin: 0PX;
+  padding: 0PX;
+  box-sizing: border-box;
+}
+:root {
+    --color-white: #fff;
+    --color-pink: #d12f7a;
+    --color-black: black;
+    --color-blue: blue;
+    --color-purple: purple;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#person {
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background-color: var(--color-black);
+}
+
+.person-name {
+    margin-top: 11rem;
+}
+
+.person-content {
+    height: 100%;
+    width: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+
+    background-color: var(--color-black);
+}
+
+.person-content div h1 {
+    color: transparent;
+
+    padding: 0px, 4px;
+    position: relative;
+    width: fit-content;
+
+    font-size: 4.5rem;
+    line-height: 6rem;
+
+    animation: written_text .5s ease forwards;
+
+}
+.person-content div h1:nth-child(1){
+    animation-delay: 1s;
+}
+.person-content div h1:nth-child(2){
+    animation-delay: 2s;
+}
+.person-content div h1:nth-child(3){
+    animation: written_text_name .5s ease forwards;
+    animation-delay: 3s;    
+}
+
+.person-content div h1 span{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    background-color:var(--color-pink);
+    animation: written_text_box 1s;
+}
+
+.person-content div h1:nth-child(1) span {
+    animation-delay: .5s;
+}
+.person-content div h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+.person-content div h1:nth-child(3) span {
+    animation-delay: 2.5s;
+}
+
+.stacks-content {
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    margin-top: 6rem;
+}
+
+.stacks-content h3 {
+    color: var(--color-white);
+    font-size: 1.15rem;
+    margin-left: 20px;
+}
+
+.stacks {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.stacks ul li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    
+    list-style: none;
+
+}
+
+.stacks ul li img {
+    width: 30px;
+    height: auto;
+    
+    transition: transform .3s ease;
+}
+
+.stacks ul li div img:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.stacks ul li div:hover::after {
+    content: attr(data);
+    position: absolute;
+    top: 50px;
+    left: 10px;
+
+    width: 20px;
+    height: 20px;
+
+    color: var(--color-white);
+
+}
+.person-back {
+    display: flex;
+    height: 100vh;
+    width: 50%;
+
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    
+
+    flex-direction: column;
+    background-image: url(./img/fundo.jpg);
+    background-size: cover;
+    background-position: top center;
+    z-index: 1;
+
+}
+
+.person-back::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    opacity: .8;
+    z-index: -1;
+
+  
+
+    background:
+     linear-gradient(270deg, transparent 95%, var(--color-black));
+}
+
+.wrapper-profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 14px;
+    margin: 20px 15px;
+    background-image: linear-gradient(50deg, rgb(217, 255, 0), blue) ;
+    
+    border-radius: 50%;
+    
+}
+
+.wrapper-profile-photo img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.links a img {
+    height: 30px;
+    width: 30px;
+
+    margin: 10px;
+    filter: brightness(.7);  
+    transition: all .3s ease; 
+    
+}
+
+.links a img:hover {
+    filter: brightness(1);
+    transform: scale(1.5);
+}
+
+
+@keyframes written_text {
+    100% {
+        color: var(--color-white);
+    }
+}
+
+@keyframes written_text_name {
+    100% {
+        color: var(--color-blue);
+    }
+}
+
+@keyframes written_text_box {
+    50% {
+      width: 100%;
+      left: 0;  
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
