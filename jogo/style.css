@@ -6,10 +6,10 @@
 }
 
 
-h2 {
+h1 {
+
     color: azure;
     background-color: brown;
-   
 }
 body {
     
@@ -19,19 +19,31 @@ body {
     position: absolute;
     align-items: center;
     min-height: 70vh;
-    background: black;
-
-    
+    background: black; 
        
 
 }
+.nuvem {
+    position: absolute;
+    width: 100px;
+    animation: nuvem-animation 2.5s infinite linear;
+
+}
+.nuvem2 {
+    position: absolute;
+    width: 50px;
+    bottom: 20%;
+    
+    animation: nuvem2-animation 2s infinite linear;
+
+}
+
 
 .estacinado {    /* jacare */
-
     position: absolute;
     bottom: -35%;
     width: 500px;
-    animation: estacinado-animation 1.8s infinite linear;
+    animation: estacinado-animation 2.2s infinite linear;
     
 }
 
@@ -47,10 +59,37 @@ body {
     animation: jump 700ms linear;
 }
 
-
+/* animação */
 @keyframes estacinado-animation {
     from {
-        right: -25%;
+        right: -55%;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+@keyframes nuvem-animation {
+    from {
+        right: -85%;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+@keyframes nuvem2-animation {
+    from {
+        right: -30%;
+    }
+
+    to {
+        right: 120%;
+    }
+}
+@keyframes versao-animation {
+    from {
+        right: -50%;
     }
 
     to {
