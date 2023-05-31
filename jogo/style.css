@@ -15,9 +15,8 @@ body {
     
     display: flex;
     justify-content: center;
-     width: 75%;
-    position: absolute;
-    align-items: center;
+     width: 100%;
+    position: relative;
     min-height: 70vh;
     background: black; 
        
@@ -41,23 +40,24 @@ body {
 
 .estacinado {    /* jacare */
     position: absolute;
-    bottom: -35%;
-    width: 500px;
+    bottom:-30vh;
+    width: 400px;
     animation: estacinado-animation 2.2s infinite linear;
-    
 }
 
 .andando {     /* sapo */
    
-    width: 130px; 
+    width: 80px; 
     position: absolute;
-    bottom: -20%;
+    bottom: -15vh;
     left: 30px;
 }
 
 .jump {  /* pulo */
     animation: jump 700ms linear;
 }
+
+
 
 /* animação */
 @keyframes estacinado-animation {
