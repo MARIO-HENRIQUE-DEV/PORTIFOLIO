@@ -28,5 +28,5 @@ const loop = setInterval(() => {
     }
 
 }, 10);
-
+docume.eddeventListener("mousedown" , jump);
 document.addEventListener('keydown', jump);
