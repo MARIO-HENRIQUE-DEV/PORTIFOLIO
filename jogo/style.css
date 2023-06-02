@@ -1,7 +1,7 @@
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0vh;
+    padding: 0vh;
     box-sizing: border-box;
 }
 
@@ -15,9 +15,10 @@ body {
     
     display: flex;
     justify-content: center;
-     width: 100%;
-    position: relative;
-    min-height: 70vh;
+     width: 50%;
+    position: absolute;
+    align-items: center;
+    min-height: 65%;
     background: black; 
        
 
@@ -25,7 +26,7 @@ body {
 .nuvem {
     position: absolute;
     width: 100px;
-    animation: nuvem-animation 2.5s infinite linear;
+    animation: nuvem-animation 100.5s infinite linear;
 
 }
 .nuvem2 {
@@ -33,23 +34,25 @@ body {
     width: 50px;
     bottom: 20%;
     
-    animation: nuvem2-animation 2s infinite linear;
+    
+    animation: nuvem2-animation 150s infinite linear;
 
 }
 
 
 .estacinado {    /* jacare */
     position: absolute;
-    bottom:-30vh;
-    width: 400px;
-    animation: estacinado-animation 2.2s infinite linear;
+    bottom: -45%;
+    width: 200px;
+    animation: estacinado-animation 2.5s infinite linear;
+    
 }
 
 .andando {     /* sapo */
    
-    width: 80px; 
+    width: 40px; 
     position: absolute;
-    bottom: -15vh;
+    bottom: -35%;
     left: 30px;
 }
 
@@ -57,16 +60,14 @@ body {
     animation: jump 700ms linear;
 }
 
-
-
 /* animação */
 @keyframes estacinado-animation {
     from {
-        right: -55%;
+        right: -100%;
     }
 
     to {
-        right: 100%;
+        right: 110%;
     }
 }
 @keyframes nuvem-animation {
@@ -104,15 +105,15 @@ body {
     }
 
     40% {
-        bottom: 35%;
+        bottom: 45%;
     }
 
     50% {
-        bottom: 50%;
+        bottom: 60%;
     }
 
     60% {
-        bottom: 35%;
+        bottom: 45%;
     }
 
     100% {
