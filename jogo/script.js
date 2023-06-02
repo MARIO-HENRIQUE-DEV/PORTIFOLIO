@@ -28,5 +28,4 @@ const loop = setInterval(() => {
     }
 
 }, 10);
-document.addEventListener("mousedown", jump);//chamar a função jump com o clik do mouse
-document.addEventListener('keydown', jump);
+document.addEventListener("mousedown", jump);
