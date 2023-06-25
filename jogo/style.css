@@ -26,7 +26,7 @@ body {
 .nuvem {
     position: absolute;
     width: 100px;
-    animation: nuvem-animation 100.5s infinite linear;
+    animation: nuvem-animation 90.5s infinite linear;
 
 }
 .nuvem2 {
@@ -35,7 +35,7 @@ body {
     bottom: 20%;
     
     
-    animation: nuvem2-animation 150s infinite linear;
+    animation: nuvem2-animation 100s infinite linear;
 
 }
 
